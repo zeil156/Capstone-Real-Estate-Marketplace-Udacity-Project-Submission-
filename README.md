@@ -27,7 +27,7 @@ ________________________________________________________________
 Clone this repository:
 
 ```
-git clone https://github.com/polarbeargo/Blockchain-Capstone.git
+git clone https://github.com/zeil156/Capstone-Real-Estate-Marketplace-Udacity-Project-Submission-.git
 ```
 
 Change directory to ```eth-contracts``` folder and install all requisite npm packages (as listed in ```package.json```):
@@ -40,7 +40,7 @@ npm install
 Launch Ganache:
 
 ```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
+ganache-cli -m "ball special robot grow omit home square country absent release total act"
 ```
 
 In a separate terminal window, Compile smart contracts:
@@ -61,13 +61,39 @@ Your terminal should look something like this:
 ```
 Compiling your contracts...
 ===========================
-> Everything is up to date, there is nothing to compile.
+> Compiling .\contracts\ERC721Mintable.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\Oraclize.sol
+> Compiling .\contracts\SolnSquareVerifier.sol
+> Compiling .\contracts\Verifier.sol
+> Compiling openzeppelin-solidity\contracts\drafts\Counters.sol
+> Compiling openzeppelin-solidity\contracts\math\SafeMath.sol
+> Compiling openzeppelin-solidity\contracts\token\ERC721\IERC721Receiver.sol
+> Compiling openzeppelin-solidity\contracts\utils\Address.sol
+> Compilation warnings encountered:
+
+    project:/contracts/Oraclize.sol:320:7: Warning: Unreachable code.
+      _networkID; // silence the warning and remain backwards compatible
+      ^--------^
+,project:/contracts/Oraclize.sol:373:7: Warning: Unreachable code.
+      _myid; _result; _proof; // Silence compiler warnings
+      ^--------------------^
+,project:/contracts/Oraclize.sol:371:5: Warning: Function state mutability can be restricted to pure
+    function __callback(bytes32 _myid, string memory _result, bytes memory _proof) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+,project:/contracts/Verifier.sol:449:5: Warning: Function state mutability can be restricted to view
+    function addition(G2Point memory p1, G2Point memory p2) internal returns (G2Point memory r) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to C:\Users\mzeil\Desktop\Working Files\CC6 Project Submission\GitClone\Blockchain-Capstone\eth-contracts\build\contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 
 
 Starting migrations...
 ======================
 > Network name:    'development'
-> Network id:      1650065453004
+> Network id:      5777
 > Block gas limit: 6721975 (0x6691b7)
 
 
@@ -76,46 +102,45 @@ Starting migrations...
 
    Deploying 'Verifier'
    --------------------
-✓ Transaction submitted successfully. Hash: 0x6e72f2c15bcbbab5b6b834b7894734b5cc4d2c6747636df5e33026c97be0fd73
-   > transaction hash:    0x6e72f2c15bcbbab5b6b834b7894734b5cc4d2c6747636df5e33026c97be0fd73
+   > transaction hash:    0xa1fbc1470a79633de88a9f340d2d6bb72e3336ad5b375f0d3f34d0e0c612d1a1
+- Blocks: 0            Seconds: 0
    > Blocks: 0            Seconds: 0
-   > contract address:    0x4E89f8aa1791173F5a8FfB21e390eaC6bB7427cc
-   > block number:        11
-   > block timestamp:     1650068096
-   > account:             0x27D8D15CbC94527cAdf5eC14B69519aE23288B95
-   > balance:             99.915511
-   > gas used:            1051350 (0x100ad6)
+   > contract address:    0x4E690dC924e81CF7eFb7011ECb3acc89a5BB3919
+   > block number:        478
+   > block timestamp:     1663021385
+   > account:             0x3Bb5457d3D9199DF1b82f37ECe0b23b32CF9B7f0
+   > balance:             91.78724606
+   > gas used:            992479 (0xf24df)
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.021027 ETH
+   > total cost:          0.01984958 ETH
 
 
    Deploying 'SolnSquareVerifier'
    ------------------------------
-✓ Transaction submitted successfully. Hash: 0x7e49076376cd3c5d6d1ed5885aa223b325a1b2aa51c3d13aea7e74717ba49514
-   > transaction hash:    0x7e49076376cd3c5d6d1ed5885aa223b325a1b2aa51c3d13aea7e74717ba49514
+   > transaction hash:    0x1172fb50095d6bd7985fa03d57f8587c0361605255fdf6f4d78a877d71b1d320
+- Blocks: 0            Seconds: 0
    > Blocks: 0            Seconds: 0
-   > contract address:    0x788D4959f9f29ef088c6F98162165778C765Fee6
-   > block number:        12
-   > block timestamp:     1650068097
-   > account:             0x27D8D15CbC94527cAdf5eC14B69519aE23288B95
-   > balance:             99.84907004
-   > gas used:            3322048 (0x32b0c0)
+   > contract address:    0x330E8000EF201B985c218096c5eCAbD2652b3b92
+   > block number:        479
+   > block timestamp:     1663021388
+   > account:             0x3Bb5457d3D9199DF1b82f37ECe0b23b32CF9B7f0
+   > balance:             91.72153536
+   > gas used:            3285535 (0x32221f)
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.06644096 ETH
+   > total cost:          0.0657107 ETH
 
-   ✓ Saving migration to chain.
-✓ Transaction submitted successfully. Hash: 0xa1eb06d6c7cac7f45d336da19ea0f629cb663a1d52dd8053947b6e967d2c297a
+- Saving migration to chain.
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.08746796 ETH
+   > Total cost:          0.08556028 ETH
 
 Summary
 =======
 > Total deployments:   2
-> Final cost:          0.08746796 ETH
+> Final cost:          0.08556028 ETH
 ``` 
 ### Contract Address  
 - Verifier: 0x4E89f8aa1791173F5a8FfB21e390eaC6bB7427cc  
