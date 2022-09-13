@@ -207,8 +207,13 @@ Compiling your contracts...
 
 ### Migrate smart contracts to rinkeby blockchain:  
 ```
+create .secret file and save in directory 'eth-contracts' that includes only one line which is the mnemonic used for your MetaMask Rinkeby account
+```
+
+```
 truffle migrate --network rinkeby
 ```  
+
 ```
 Compiling your contracts...
 ===========================
