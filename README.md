@@ -1,5 +1,3 @@
-# Capstone-Real-Estate-Marketplace-Udacity-Project-Submission-
-
 # Udacity Blockchain Capstone
 
 At present, property titles are often paper-based, creating opportunities for errors and fraud. Title professionals find defects in 25% of all titles during the transaction process, according to the American Land Title Association.
