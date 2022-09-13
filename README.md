@@ -142,95 +142,160 @@ Summary
 > Total deployments:   2
 > Final cost:          0.08556028 ETH
 ``` 
-### Contract Address  
-- Verifier: 0x4E89f8aa1791173F5a8FfB21e390eaC6bB7427cc  
-- SolnSquareVerifier: 0x788D4959f9f29ef088c6F98162165778C765Fee6  
-
 Test smart contracts:
 
 ```
 truffle test
 ```
 
-All 10 tests should pass.
-
-![truffle test](images/truffle_test.png)
-
-In a separate terminal window, launch the DApp:
-
+All 10 tests should pass.  Your terminal should look something like this:
 ```
-npm run dev
-```  
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\ERC721Mintable.sol
+> Compiling .\contracts\ERC721Mintable.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\Oraclize.sol
+> Compiling .\contracts\SolnSquareVerifier.sol
+> Compiling .\contracts\SquareVerifier.sol
+> Compilation warnings encountered:
+
+    project:/contracts/Oraclize.sol:320:7: Warning: Unreachable code.
+      _networkID; // silence the warning and remain backwards compatible
+      ^--------^
+,project:/contracts/Oraclize.sol:373:7: Warning: Unreachable code.
+      _myid; _result; _proof; // Silence compiler warnings
+      ^--------------------^
+,project:/contracts/Oraclize.sol:371:5: Warning: Function state mutability can be restricted to pure
+    function __callback(bytes32 _myid, string memory _result, bytes memory _proof) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+,project:/contracts/SquareVerifier.sol:449:5: Warning: Function state mutability can be restricted to view
+    function addition(G2Point memory p1, G2Point memory p2) internal returns (G2Point memory r) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to C:\Users\mzeil\AppData\Local\Temp\test--11088-ogRFcTGLavQS
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+  Contract: TestERC721Mintable
+    match erc721 spec
+      √ should return total supply (1343ms)
+      √ should get token balance (478ms)
+      √ should return token uri (178ms)
+      √ should transfer token from one owner to another (1391ms)
+    have ownership properties
+      √ should fail when minting when address is not contract owner (1193ms)
+      √ should return contract owner (55ms)
+
+  Contract: Test SolnSquareVerifier
+    test solnSquareVerifier with proof
+      √ if a new solution can be added for contract and token minted - SolnSquareVerifier (3659ms)
+      √ if a repeat solution can be added for contract - SolnSquareVerifier (4397ms)
+
+  Contract: Test SquareVerifier
+    test verifier with proof
+      √ verify with correct proof (862ms)
+      √ verify failure with incorrect proof (666ms)
+
+
+  10 passing (1m)
+```
+
 ### Migrate smart contracts to rinkeby blockchain:  
 ```
 truffle migrate --network rinkeby
 ```  
-
 ```
 Compiling your contracts...
 ===========================
-> Everything is up to date, there is nothing to compile.
-WARNING: Ganache forking only supports EIP-1193-compliant providers. Legacy support for send is currently enabled, but will be removed in a future version _without_ a breaking change. To remove this warning, switch to an EIP-1193 provider. This error is probably caused by an old version of Web3's HttpProvider (or ganache < v7)
+> Compiling .\contracts\ERC721Mintable.sol
+> Compiling .\contracts\ERC721Mintable.sol
+> Compiling .\contracts\Migrations.sol
+> Compiling .\contracts\Oraclize.sol
+> Compiling .\contracts\SolnSquareVerifier.sol
+> Compiling .\contracts\SquareVerifier.sol
+> Compilation warnings encountered:
+
+    project:/contracts/Oraclize.sol:320:7: Warning: Unreachable code.
+      _networkID; // silence the warning and remain backwards compatible
+      ^--------^
+,project:/contracts/Oraclize.sol:373:7: Warning: Unreachable code.
+      _myid; _result; _proof; // Silence compiler warnings
+      ^--------------------^
+,project:/contracts/Oraclize.sol:371:5: Warning: Function state mutability can be restricted to pure
+    function __callback(bytes32 _myid, string memory _result, bytes memory _proof) public {
+    ^ (Relevant source part starts here and spans across multiple lines).
+,project:/contracts/SquareVerifier.sol:449:5: Warning: Function state mutability can be restricted to view
+    function addition(G2Point memory p1, G2Point memory p2) internal returns (G2Point memory r) {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to C:\Users\mzeil\Desktop\Working Files\CC6 Project Submission\GitClone\Blockchain-Capstone\eth-contracts\build\contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
 
 
 Migrations dry-run (simulation)
 ===============================
 > Network name:    'rinkeby-fork'
 > Network id:      4
-> Block gas limit: 30000000 (0x1c9c380)
+> Block gas limit: 29970705 (0x1c95111)
 
 
 1_initial_migration.js
 ======================
 
-   Replacing 'Migrations'
+   Deploying 'Migrations'
    ----------------------
-   > block number:        10557408
-   > block timestamp:     1650762640
-   > account:             0x68A5D02aB9C71892d1607B78bAB4f106BF142B21
-   > balance:             0.585076944383334
+   > block number:        11370149
+   > block timestamp:     1663027362
+   > account:             0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+   > balance:             0.199433657498414241
    > gas used:            226537 (0x374e9)
-   > gas price:           2.500000008 gwei
+   > gas price:           2.500000007 gwei
    > value sent:          0 ETH
-   > total cost:          0.000566342501812296 ETH
+   > total cost:          0.000566342501585759 ETH
 
    -------------------------------------
-   > Total cost:     0.000566342501812296 ETH
+   > Total cost:     0.000566342501585759 ETH
 
 
 2_deploy_contracts.js
 =====================
 
-   Replacing 'Verifier'
-   --------------------
-   > block number:        10557410
-   > block timestamp:     1650762644
-   > account:             0x68A5D02aB9C71892d1607B78bAB4f106BF142B21
-   > balance:             0.582244861874271336
-   > gas used:            1087070 (0x10965e)
-   > gas price:           2.500000008 gwei
+   Deploying 'SquareVerifier'
+   --------------------------
+   > block number:        11370151
+   > block timestamp:     1663027363
+   > account:             0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+   > balance:             0.196838052491146547
+   > gas used:            992479 (0xf24df)
+   > gas price:           2.500000007 gwei
    > value sent:          0 ETH
-   > total cost:          0.00271767500869656 ETH
+   > total cost:          0.002481197506947353 ETH
 
 
-   Replacing 'SolnSquareVerifier'
+   Deploying 'SolnSquareVerifier'
    ------------------------------
-   > block number:        10557411
-   > block timestamp:     1650762659
-   > account:             0x68A5D02aB9C71892d1607B78bAB4f106BF142B21
-   > balance:             0.573751016847091032
-   > gas used:            3397538 (0x33d7a2)
-   > gas price:           2.500000008 gwei
+   > block number:        11370152
+   > block timestamp:     1663027367
+   > account:             0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+   > balance:             0.188791007468614821
+   > gas used:            3218818 (0x311d82)
+   > gas price:           2.500000007 gwei
    > value sent:          0 ETH
-   > total cost:          0.008493845027180304 ETH
+   > total cost:          0.008047045022531726 ETH
 
    -------------------------------------
-   > Total cost:     0.011211520035876864 ETH
+   > Total cost:     0.010528242529479079 ETH
 
 Summary
 =======
 > Total deployments:   3
-> Final cost:          0.01177786253768916 ETH
+> Final cost:          0.011094585031064838 ETH
 
 
 
@@ -239,75 +304,86 @@ Starting migrations...
 ======================
 > Network name:    'rinkeby'
 > Network id:      4
-> Block gas limit: 29970705 (0x1c95111)
+> Block gas limit: 29999972 (0x1c9c364)
 
 
 1_initial_migration.js
 ======================
 
-   Replacing 'Migrations'
+   Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0xc53c341561f94b7438d4fbb7cd6c4bc51e409e45de37410e74819212e53d7394
-   > Blocks: 3            Seconds: 49
-   > contract address:    0x411fb83BF2bC5f9fee509c6E3f2d5d68F8524Ee8
-   > block number:        10557417
-   > block timestamp:     1650762712
-   > account:             0x68A5D02aB9C71892d1607B78bAB4f106BF142B21
-   > balance:             0.585190212881295167
+   > transaction hash:    0xf325c065c9ad16ef4e025d4b1dddf7b8b692e33aa12bc3ce04162daea21bae45
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 4
+- Blocks: 1            Seconds: 8
+   > Blocks: 1            Seconds: 8
+   > contract address:    0x209220f07AEFE00496Bee142f6ddb1Caf8CD7948
+   > block number:        11370154
+   > block timestamp:     1663027369
+   > account:             0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+   > balance:             0.209660194498187704
    > gas used:            226537 (0x374e9)
-   > gas price:           1.000000009 gwei
+   > gas price:           1.500000008 gwei
    > value sent:          0 ETH
-   > total cost:          0.000226537002038833 ETH
+   > total cost:          0.000339805501812296 ETH
 
-   ✓ Saving migration to chain.
+- Saving migration to chain.
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.000226537002038833 ETH
+   > Total cost:     0.000339805501812296 ETH
 
 
 2_deploy_contracts.js
 =====================
 
-   Replacing 'Verifier'
-   --------------------
-   > transaction hash:    0xadf53e147c5398c46fc9f596b3a31a4463c96ac9866ef7cb4e7642dadd319ff3
-   > Blocks: 1            Seconds: 9
-   > contract address:    0x66A6F0b8d36307f21f50E7a30D00d5aeC1f060a8
-   > block number:        10557419
-   > block timestamp:     1650762742
-   > account:             0x68A5D02aB9C71892d1607B78bAB4f106BF142B21
-   > balance:             0.584057379872232503
-   > gas used:            1087070 (0x10965e)
-   > gas price:           1.000000008 gwei
+   Deploying 'SquareVerifier'
+   --------------------------
+   > transaction hash:    0xd4a63c553c5c938592e31672fca8c5d259003b0ea169e9b37a351dc91dbcff02
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 4
+- Blocks: 0            Seconds: 8
+- Blocks: 1            Seconds: 12
+   > Blocks: 1            Seconds: 12
+   > contract address:    0xD27F53208FBbeB58bE9f7143Adff02026800B66a
+   > block number:        11370156
+   > block timestamp:     1663027399
+   > account:             0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+   > balance:             0.208102831489881768
+   > gas used:            992479 (0xf24df)
+   > gas price:           1.500000008 gwei
    > value sent:          0 ETH
-   > total cost:          0.00108707000869656 ETH
+   > total cost:          0.001488718507939832 ETH
 
 
-   Replacing 'SolnSquareVerifier'
+   Deploying 'SolnSquareVerifier'
    ------------------------------
-   > transaction hash:    0x4c8fb71376bc972c83548f18432584ac1cc761ee8b661158421e4e8d0dfb11ea
-   > Blocks: 1            Seconds: 9
-   > contract address:    0xF4aDAF06f97F8b5b9639f776de5A049c6b5dFE91
-   > block number:        10557420
-   > block timestamp:     1650762757
-   > account:             0x68A5D02aB9C71892d1607B78bAB4f106BF142B21
-   > balance:             0.580659853845052295
-   > gas used:            3397526 (0x33d796)
-   > gas price:           1.000000008 gwei
+   > transaction hash:    0x5ca773ee382f366ebb72a25ded4aa6bf4943cc6ce4f3152f3718f48948bb5366
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 4
+- Blocks: 0            Seconds: 8
+- Blocks: 0            Seconds: 12
+   > Blocks: 0            Seconds: 12
+   > contract address:    0x8395ab676A41AebF8D47add9b2b6eaB16bD6D2cf
+   > block number:        11370157
+   > block timestamp:     1663027414
+   > account:             0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+   > balance:             0.203274604464131224
+   > gas used:            3218818 (0x311d82)
+   > gas price:           1.500000008 gwei
    > value sent:          0 ETH
-   > total cost:          0.003397526027180208 ETH
+   > total cost:          0.004828227025750544 ETH
 
-   ✓ Saving migration to chain.
+- Saving migration to chain.
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:     0.004484596035876768 ETH
+   > Total cost:     0.006316945533690376 ETH
 
 Summary
 =======
 > Total deployments:   3
-> Final cost:          0.004711133037915601 ETH
+> Final cost:          0.006656751035502672 ETH
 
 ```  
 ### Contract Transaction Hash on rinkeby blockchain:  
