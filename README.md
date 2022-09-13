@@ -394,12 +394,18 @@ Summary
 ### Contract Transaction Hash on rinkeby blockchain:  
 - Verifier: 0xd4a63c553c5c938592e31672fca8c5d259003b0ea169e9b37a351dc91dbcff02 
 - SolnSquareVerifier: 0x5ca773ee382f366ebb72a25ded4aa6bf4943cc6ce4f3152f3718f48948bb5366
+
 ### Contract Address on rinkeby blockchain:   
 - Verifier: 0xD27F53208FBbeB58bE9f7143Adff02026800B66a  
 - SolnSquareVerifier:  0x8395ab676A41AebF8D47add9b2b6eaB16bD6D2cf
+
 ### Deployed using MetaMask:
 - Account: 0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
 https://rinkeby.etherscan.io/address/0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+
+### Contract ABIs found at:
+- https://github.com/zeil156/Capstone-Real-Estate-Marketplace-Udacity-Project-Submission-/tree/main/Blockchain-Capstone/eth-contracts/build
+- Use Verifier.json and SquareVerifier.json to view the ABIs
 
 ## OpenSea MarketPlace Storefront link
 https://testnets.opensea.io/collection/custom-erc-token
