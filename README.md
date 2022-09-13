@@ -387,29 +387,19 @@ Summary
 
 ```  
 ### Contract Transaction Hash on rinkeby blockchain:  
-- Verifier: 0xadf53e147c5398c46fc9f596b3a31a4463c96ac9866ef7cb4e7642dadd319ff3  
-- SolnSquareVerifier: 0x4c8fb71376bc972c83548f18432584ac1cc761ee8b661158421e4e8d0dfb11ea  
+- Verifier: 0xd4a63c553c5c938592e31672fca8c5d259003b0ea169e9b37a351dc91dbcff02 
+- SolnSquareVerifier: 0x5ca773ee382f366ebb72a25ded4aa6bf4943cc6ce4f3152f3718f48948bb5366
 ### Contract Address on rinkeby blockchain:   
-- Verifier: 0x66A6F0b8d36307f21f50E7a30D00d5aeC1f060a8  
-- SolnSquareVerifier: 0xF4aDAF06f97F8b5b9639f776de5A049c6b5dFE91   
-[Live deployment event on Etherscan](https://rinkeby.etherscan.io/address/0xF4aDAF06f97F8b5b9639f776de5A049c6b5dFE91#events) 
+- Verifier: 0xD27F53208FBbeB58bE9f7143Adff02026800B66a  
+- SolnSquareVerifier:  0x8395ab676A41AebF8D47add9b2b6eaB16bD6D2cf
+### Deployed using MetaMask:
+- Account: 0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
+[Live deployment event on Etherscan](https://rinkeby.etherscan.io/address/0x53aA0a0221a5Ea932Be1909E646d1f86491F2330) 
 
-## Contract Abi's
-- [Verifier](https://github.com/polarbeargo/Blockchain-Capstone/blob/master/eth-contracts/build/contracts/Verifier.json)  
-- [SolnSquareVerifier](https://github.com/polarbeargo/Blockchain-Capstone/blob/master/eth-contracts/build/contracts/SolnSquareVerifier.json)  
-### Getting Started with Zokrates  
-1. Install Docker (Docker for Desktop is fine too)
-2. Run: ```docker run -v <your repo location>/Blockchain-Capstone/zokrates/code:/home/zokrates/code -ti zokrates/zokrates /bin/bash```
-3. ```cd square```
-4. Compile the program written in ZoKrates DSL ```zokrates compile -i square.code```
-5. Run zocrates setup ```zokrates setup```
-6. Compute Witness ```zokrates compute-witness -a 3 9``` follow [knowledge hub discuss](https://knowledge.udacity.com/questions/398019)
-7. Generate Proof ```zokrates generate-proof```
-8. Export Verifier ```zokrates export-verifier```  
 ## OpenSea MarketPlace Storefront link
-https://testnets.opensea.io/collection/decentralized-real-estate-marketplace-v4
-# Project Resources
+https://testnets.opensea.io/collection/custom-erc-token
 
+# Project Resources
 * [Remix - Solidity IDE](https://remix.ethereum.org/)
 * [Visual Studio Code](https://code.visualstudio.com/) 
 * [Truffle Framework](https://truffleframework.com/)
