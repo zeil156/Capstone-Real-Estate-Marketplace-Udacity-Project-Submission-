@@ -394,7 +394,8 @@ Summary
 - SolnSquareVerifier:  0x8395ab676A41AebF8D47add9b2b6eaB16bD6D2cf
 ### Deployed using MetaMask:
 - Account: 0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
-[Live deployment event on Etherscan](https://rinkeby.etherscan.io/address/0x53aA0a0221a5Ea932Be1909E646d1f86491F2330) 
+[Live deployment event on Etherscan](https://rinkeby.etherscan.io/address/0x53aA0a0221a5Ea932Be1909E646d1f86491F2330)
+https://rinkeby.etherscan.io/address/0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
 
 ## OpenSea MarketPlace Storefront link
 https://testnets.opensea.io/collection/custom-erc-token
