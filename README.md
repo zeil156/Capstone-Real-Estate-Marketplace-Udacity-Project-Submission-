@@ -404,7 +404,7 @@ Summary
 https://rinkeby.etherscan.io/address/0x53aA0a0221a5Ea932Be1909E646d1f86491F2330
 
 ### Contract ABIs found in this GitHub repository:
-- https://github.com/zeil156/Capstone-Real-Estate-Marketplace-Udacity-Project-Submission-/tree/main/Blockchain-Capstone/eth-contracts/build
+- https://github.com/zeil156/Capstone-Real-Estate-Marketplace-Udacity-Project-Submission-/tree/main/Blockchain-Capstone/eth-contracts/build/contracts
 - Use Verifier.json and SquareVerifier.json to view the ABIs
 
 ## OpenSea MarketPlace Storefront link
